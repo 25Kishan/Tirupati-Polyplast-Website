@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- <link rel="stylesheet" href="product.css"> -->
+    <link rel="stylesheet" href="w3school.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body,
+html,
+.seq {
+
+  /* #1 */
+  width: 100%;
+  height: 100%;
+
+  /* #2 */
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Styles: Container
+ * 1: Canvas, steps, and content should be positioned relative to the container
+ * 2: Hide anything that goes beyond the boundaries of the Sequence container
+ * 3: Some basic styles
+ * 4: Set the initial background color
+ * 5: Make the background color transition when navigating between steps
+ */
+.seq {
+
+  /* #1 */
+  position: relative;
+
+  /* #2 */
+  overflow: hidden;
+
+  /* #3 */
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+
+  /* #4 */
+  background-color: #2A93BC;
+
+  /* #5 */
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+/*
+ * Styles: Canvas and steps
+ * 1: Make the width/height of the screen, canvas, and steps the same size as the Sequence element
+ * 2: Reset the canvas and steps for better browser consistency
+ */
+.seq-canvas,
+.seq-canvas > * {
+
+  /* #1 */
+  height: 100%;
+  width: 100%;
+
+  /* #2 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+ * Styles: steps
+ * 1: Position steps all in the same place
+ * 2: Add whitespace around each step
+ * 3: Make space for the pagination
+ */
+.seq-canvas > * {
+  /* #1 */
+  position: absolute;
+
+  /* #2 */
+  padding: 32px;
+  box-sizing: border-box;
+
+  /* #3 */
+  height: auto;
+  top: 0;
+  bottom: 80px;
+}
+
+.seq-step1 {
+  background-color: #2A93BC;
+}
+
+.seq-step2 {
+  background-color: #6BC85E;
+}
+
+.seq-step3 {
+  background-color: #45367E;
+}
+
+.feature {
+  width: 70%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 460px) and (min-height: 520px) {
+  .feature {
+    width: 100%;
+  }
+}
+
+
+/* Ghost element */
+.valign:before {
+  content: "";
+  height: 100%;
+}
+
+/* Vertically align the ghost and desired elements */
+.valign:before,
+.valign > .vcenter {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Remove 4px gap to allow consistent valign */
+.valign {
+  font-size: 0;
+}
+
+/* Reset font-size on valigned elements */
+.valign > .vcenter {
+  font-size: 16px;
+}
+
+/*
+ * 1: Reset
+ * 2: Titles should start as transparent
+ * 3: When a change in opacity occurs, transition over .5s
+ */
+.title {
+  /* #1 */
+  margin: 0;
+
+  /* #2 */
+  opacity: 0;
+  -webkit-transform: translateX(50px) translateZ(0);
+          transform: translateX(50px) translateZ(0);
+
+  /* #3 */
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+
+/*
+ * When a step is active, fade in to opaque and slide to the center
+ */
+.seq-in .title {
+  opacity: 1;
+  -webkit-transform: translateX(0) translateZ(0);
+          transform: translateX(0) translateZ(0);
+}
+
+/*
+ * When a step becomes inactive, fade out and slide to the left
+ */
+.seq-out .title {
+  opacity: 0;
+  -webkit-transform: translateX(-50px) translateZ(0);
+          transform: translateX(-50px) translateZ(0);
+}
+
+/*
+ * Scale an image to 0 (so it can't be seen) when in its start position
+ */
+.feature {
+  -webkit-transform: translateZ(0) scale(0);
+          transform: translateZ(0) scale(0);
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+}
+
+/*
+ * When a step is active, make the image scale in
+ */
+.seq-in .feature {
+  -webkit-transform: translateZ(0) scale(1);
+          transform: translateZ(0) scale(1);
+}
+
+/*
+ * When a step becomes inactive, make the image fade out but maintain full scale
+ */
+.seq-out .feature {
+  -webkit-transform: translateZ(0) scale(1);
+          transform: translateZ(0) scale(1);
+  opacity: 0;
+}
+
+/*
+ * Styles: element holding navigation UI
+ * 1: Position the nav 40px from the bottom and make it full-width
+ * 2: Reset styles for the <fieldset> element
+ */
+.nav {
+  /* #1 */
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 2.5em;
+  max-width: 640px;
+  width: 100%;
+
+  /* #2 */
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*
+ * Styles: previous/next buttons
+ * 1: Reset styles
+ * 2: General styles
+ * 3: Set up the `opacity` so that it will transition from 70% transparency to opaque when hovered over
+ */
+.seq-next,
+.seq-prev {
+  /* #1 */
+  padding: 0;
+  background: transparent;
+  border: none;
+
+  /* #2 */
+  padding: .75em;
+  cursor: pointer;
+  color: white;
+  font-size: .75em;
+  text-transform: uppercase;
+
+  /* #3 */
+  opacity: .7;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.seq-next:hover,
+.seq-prev:hover {
+  opacity: 1;
+}
+
+/*
+ * Styles: next/previous buttons and pagination container
+ */
+.seq-next,
+.seq-prev,
+.seq-pagination {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0;
+}
+
+/*
+ * Add some space to sides of pagination
+ */
+.seq-pagination {
+  margin: 0 1em;
+  padding: 0;
+}
+
+/*
+ * Styles: pagination links
+ * 1: Make the links relative so their active indicator dot can be position: absolute
+ * 2: Reset styles
+ * 3: Make the links sit side-by-side
+ * 4: General styles
+ */
+.seq-pagination li {
+  /* #1 */
+  position: relative;
+
+  /* #2 */
+  list-style: none;
+
+  /* #3 */
+  display: inline-block;
+  vertical-align: middle;
+
+  /* #4 */
+  width: 50px;
+  height: 40px;
+  margin: 0 .25em;
+}
+
+/*
+ * Styles: A small dot that appears when a pagination link is active
+ * 1: position the dot under the image and centered
+ * 2: Make the dot transparent when not active and set up a transition for when it becomes active
+ */
+.seq-pagination li:before {
+  /* #1 */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  margin-top: .5em;
+  border-radius: 50%;
+  background: white;
+
+  /* #2 */
+  opacity: 0;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+/*
+ * Show the indicator dot for the current link
+ */
+.seq-pagination .seq-current:before {
+  opacity: .7;
+}
+
+/*
+ * Reset styles
+ */
+.seq-pagination img,
+.seq-pagination a {
+  display: block;
+  border: none;
+}
+</style>
+</head>
+<body>
+    <h2 align="center">Tirupati Polyplast</h2>
+    <div id="sequence" class="seq">
+        
+      <ul class="seq-canvas">
+        <div class="slider slideshow-container">
+         
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img id="circle_img_rotate" src="../assets/images/bottles/icon-4.png" >
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img id="circle_img_rotate" src="../assets/images/bottles/icon-3.png" >
+            <div class="text">Pharmacheuticals Plastic Containers</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img id="circle_img_rotate" src="../assets/images/bottles/icon-2.png" >
+            <div class="text">Agriculture and Pesticides Bottles</div>
+          </div>
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img id="circle_img_rotate" src="../assets/images/bottles/icon-1.png">
+            <div  class="text">Lubricants Oil HDPE Containers</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img id="circle_img_rotate" src="../assets/images/bottles/sprayer1.png">
+            <div class="text">Caption Two</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img id="circle_img_rotate" src="../assets/images/bottles/icon-5.png" >
+            <div class="text">Caption Three</div>
+          </div>
+          </div>
+    
+         
+      </ul>
+    </div>
+      <fieldset class="nav" aria-label="Slider buttons" aria-controls="sequence">
+        <div class="ciclegraph">
+          <div class="circle">
+            <!-- <a href="#step1" rel="step1" title="Go to bananas"> -->
+              <img src="../assets/images/bottles/icon-2.png" alt="Bananas" id="circle_img" />
+            <!-- </a> -->
+          </div>
+          <div class="circle">
+            <!-- <a href="#step2" rel="step2" title="Go to bananas"> -->
+              <img src="../assets/images/bottles/icon-3.png" alt="Bananas" id="circle_img" />
+            <!-- </a> -->
+            </div>
+          <div class="circle">
+            <!-- <a href="#step3" rel="step3" title="Go to bananas"> -->
+              <img src="../assets/images/bottles/icon-4.png" alt="Bananas" id="circle_img" />
+            <!-- </a> -->
+          </div>
+          <div class="circle">
+            <!-- <a href="#step4" rel="step4" title="Go to bananas"> -->
+              <img src="../assets/images/bottles/icon-5.png" alt="Bananas" id="circle_img" />
+            <!-- </a> -->
+          </div>
+          <div class="circle">
+            <!-- <a href="#step5" rel="step5" title="Go to coconut"> -->
+              <img src="../assets/images/bottles/sprayer1.png" alt="Coconut" id="circle_img" />
+            <!-- </a> -->
+          </div>
+          <div class="circle"> <!-- top (1) -->
+            <!-- <a href="#step6" rel="step6" title="Go to orange"> -->
+              <img src="../assets/images/bottles/icon-1.png" alt="Orange" id="circle_img" />
+            <!-- </a> -->
+          </div>
+        </div>
+        
+      </fieldset>
+    <div>
+      <button class="w3-button w3-black w3-display-left" onclick="minsDivs()">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs()">&#10095;</button>
+    </div>     
+      <!-- <div style="margin-top: -2%;">ABC</div> -->
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/imagesloaded.pkgd.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/hammer.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/sequence.min.2.1.0.js'></script>
+<script>
+
+ // imagesLoaded.js, Hammer.js, and Sequence.js loaded as external assets
+// document.querySelectorAll( '.ciclegraph' ).forEach( ( ciclegraph )=>{
+//   let circles = ciclegraph.querySelectorAll( '.circle' )
+//   let angle = 360-90, dangle = 360 / circles.length
+//   for( let i = 0; i < circles.length; ++i ){
+//     let circle = circles[i]
+//     angle += dangle
+//     circle.style.transform = `rotate(${angle}deg) translate(${ciclegraph.clientWidth / 2}px) rotate(-${angle}deg)`
+//   }
+// });
+///
+var slideIndex = 1;
+var timer = null;
+showSlides(slideIndex);
+
+// function plusSlides(n) {
+//   clearInterval(myTimer);
+//   if (n < 0){
+//     showSlides(slideIndex -= 1);
+//   } else {
+//    showSlides(slideIndex += 1); 
+//   }
+// }
+
+function currentSlide(n) {
+  clearTimeout(timer);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n==undefined){n = ++slideIndex}
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  // for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  // }
+  slides[slideIndex-1].style.display = "block";
+  // dots[slideIndex-1].className += " active";
+  
+} 
+
+function plusDivs() {
+  clearInterval(myinterval);
+  rotate_circle();
+  
+  // alert(slideIndex);
+  // $(".mySlides").css("")
+  // setInterval(showSlides, 3000);
+  // setInterval(rotate_circle,3000);
+  showSlides(slideIndex += 1);
+  $(".fade").css("-webkit-animation-duration","5s");
+  $(".fade").css(" animation-duration","5s");
+  setTimeout(function() {
+       set_timer();
+    }, 2000);
+}
+
+function set_timer(){
+  myinterval =  setInterval(() => {
+  rotate_circle();
+  
+  showSlides();
+},3000);
+}
+$(function() {
+    var angle = 90;
+    document.querySelectorAll( '.ciclegraph' ).forEach( ( ciclegraph )=>{
+  let circles = ciclegraph.querySelectorAll( '.circle' )
+  let dangle = 360 / circles.length
+  for( let i = 0; i < circles.length; ++i ){
+    let circle = circles[i]
+    angle += dangle
+    circle.style.transform = `rotate(${angle}deg) translate(${ciclegraph.clientWidth / 2}px) rotate(-${angle}deg)`
+  }
+});
+
+});
+var click_time = 0;
+var angle = 75;
+var angle_2 = 90;
+function rotate_circle() {
+ 
+  // alert(angle);
+  $('.ciclegraph').attr('id', 'rot');
+  $(".ciclegraph").css("-ms-transform", "rotate("+angle+"deg)");
+        $(".ciclegraph").css("-webkit-transform", "rotate("+angle+"deg)");
+       $(".ciclegraph").css("transform", "rotate("+angle+"deg)");
+        $(".ciclegraph").css("-webkit-transition", "transform 1s");
+        $(".ciclegraph").css("transition", "transform 1s");
+       //$(".ciclegraph").css("background-color", "black");
+       $(".circle").css("transform", "rotate("+angle+"deg)");
+    document.querySelectorAll( '.ciclegraph' ).forEach( ( ciclegraph )=>{
+  let circles = ciclegraph.querySelectorAll( '.circle' )
+  let dangle = 360 / circles.length
+  for( let i = 0; i < circles.length; ++i ){
+    let circle = circles[i]
+    angle += dangle
+    circle.style.transform = `rotate(${angle}deg) translate(${ciclegraph.clientWidth / 2}px) rotate(${angle_2}deg)`
+    
+  }
+  // clearInterval(setInter);
+  
+});
+// alert(angle);
+click_time ++;
+angle = 75;
+angle += (30 * click_time);
+//alert(click_time);
+}
+var click_time_1 = 0;
+var anglee_2 = 0;
+var anglee_2_2 = 85;
+var spe_angle = 100;
+
+function minsDivs() {
+  clearInterval(myinterval);
+  angle = 75;
+  rotate_circle_rev();
+  showSlides(slideIndex);
+  click_time = 0;
+  set_timer();
+  counter_1 = 0;
+}
+
+var counter_1 = 0;
+function rotate_circle_rev() {
+  //  clearInterval(myinterval);
+    // alert(anglee_2);
+    // alert("SLIDER:"+slideIndex);
+    if(slideIndex == 1){
+      if(counter_1 == 1){
+        anglee_2 = anglee_2;
+      }
+      else{
+      anglee_2 = -75;
+      slideIndex = 6;
+      counter_1++;}
+      
+    }
+    else if(slideIndex == 2){
+       if(counter_1 == 1){
+         anglee_2 = anglee_2;
+       }
+      else{
+      anglee_2 = -8;
+      slideIndex = 1;
+      counter_1++;}
+      
+    }
+    else if(slideIndex == 3){
+      if(counter_1 == 1){
+         anglee_2 = anglee_2;
+       }
+       else{
+      anglee_2 = 52;
+      slideIndex = 2;
+      counter_1++;
+    } 
+    }
+    else if(slideIndex == 4){
+      if(counter_1 == 1){
+         anglee_2 = anglee_2;
+       }
+       else{
+      anglee_2 = 112;
+      slideIndex = 3;
+      counter_1++;}
+      
+    }
+    else if(slideIndex == 5){
+      if(counter_1 == 1){
+         anglee_2 = anglee_2;
+       }
+       else{
+      anglee_2 = 172;
+      slideIndex = 4;
+      counter_1++;}
+      
+    }
+    else if(slideIndex == 6){
+      alert("HA HU");
+      if(counter_1 == 1){
+         anglee_2 = anglee_2;
+       }
+      else{
+     anglee_2 = 232
+      slideIndex = 5;
+      counter_1++;}
+      
+    }
+  
+  $('.ciclegraph').attr('id', 'rot');
+  $(".ciclegraph").css("-ms-transform", "rotate("+anglee_2+"deg)");
+        $(".ciclegraph").css("-webkit-transform", "rotate("+anglee_2+"deg)");
+       $(".ciclegraph").css("transform", "rotate("+anglee_2+"deg)");
+        $(".ciclegraph").css("-webkit-transition", "transform 1s");
+        $(".ciclegraph").css("transition", "transform 1s");
+      //  $(".ciclegraph").css("background-color", "black");
+       $(".circle").css("transform", "rotate("+anglee_2+"deg)");
+    document.querySelectorAll( '.ciclegraph' ).forEach( ( ciclegraph )=>{
+  let circles = ciclegraph.querySelectorAll( '.circle' )
+   let danglee_2 = 360 / circles.length
+  for( let i = 0; i < circles.length; ++i ){
+    let circle = circles[i]
+    spe_angle += danglee_2
+    circle.style.transform = `rotate(${spe_angle}deg) translate(${ciclegraph.clientWidth / 2}px) rotate(${anglee_2_2}deg)`
+    
+  }
+  // clearInterval(setInter);
+  
+ });
+click_time_1++;
+alert(anglee_2);
+anglee_2 = 0;
+alert("click"+click_time_1);
+anglee_2 -= (60 * click_time_1);
+
+}
+
+myinterval =  setInterval(() => {
+  rotate_circle();
+  showSlides();
+},3000);
+
+var Inttime = 3025;
+var myinterval , myinterval_2;
+var change = 0;
+var sequenceElement = document.getElementById("sequence");
+// 
+
+//var myFunCall = rotate_circle();
+
+
+// setInterval(sequence(sequenceElement, options), 6000);
+</script>
+</body>
+</html>

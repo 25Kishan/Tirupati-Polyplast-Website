@@ -124,7 +124,7 @@ z-index: 2;
 #about-text{
     position: absolute;
     opacity: 2;
-    margin-top: 10%;
+    margin-top: 3%;
     margin-left: 10%;
     margin-right: 10%;
     justify-content: center;
@@ -133,3 +133,38 @@ z-index: 2;
     padding-top: 2%;
     z-index: 1;
 }
+#heading{
+    text-align: center;
+    margin-top: -4%;
+    letter-spacing: 2px;
+}
+#discover_heading{
+    position: relative;
+font-family: 'thisregular';
+font-size: 75px;
+font-size: 7vw;
+font-weight: 400;
+letter-spacing: 0;
+text-transform: none;
+padding: 0 0;
+margin: 0 -72px -40px;
+color: teal;
+}
+#discover_heading #heading_big {
+    top: 9px;
+    position: relative;
+    top: 10px;
+    font-size: 1.22em;
+    padding: 0 72px;
+    margin: 0 -72px;}
+#secondry_heading{
+    position: relative;
+z-index: 1;
+margin: 0 -.1em 0 0;
+letter-spacing: .2em;
+}
+.separator--flower {
+    margin: 24px 0;
+    font-size: 17px;
+    font-family: Serif;
+    color: #9a9998;}
