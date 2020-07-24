@@ -171,6 +171,7 @@
     height: 554px;
     z-index: 3;
     opacity: 1;
+    margin-top: -2%;
   }
   @keyframes slide-in {
     0% {-webkit-transform: translateX(-180%);}
