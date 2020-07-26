@@ -1,0 +1,43 @@
+.footerdesk01 { float: left; display: inline-block; width: 100%;  background: linear-gradient(to bottom right, #d3d3d3 0%, #ffffff 100%); padding-top: 13%; padding-bottom: 40px; padding-left:6%; }
+/*footer default style*/
+
+.footer_desk { float: left; display: inline-block; margin-top: -2%; background-color: transparent; background-repeat: no-repeat; background-image: url(../images/footer_bg_1.png); background-size: cover; background-position: right top; width: 100%; height: 100%; }
+.footer_inner { float: left; display: inline-block; width: 100%; }
+.part_1 { float: left; margin-right: 109px; display: inline-block; width: 40%; }
+.foot_logo { text-align: left; }
+.part_1 h1 { font-family: 'Lato-Bold'; font-size: 21px; color: #000; text-align: center; line-height: 44px; letter-spacing: 1px; word-spacing: 4px; text-transform: uppercase; }
+.part_1 p { font-size: 17px; color: #000; text-align: justify; line-height: 26px; letter-spacing: 0.5px; word-spacing: 0.4px; margin-top: 12px; }
+.part_2, .part_3 { float: left; display: inline-block; width: 20%; }
+.part_3 { width: 20% !important; height:350px;}
+
+.bootom_link { float: left; display: inline-block; margin-top: 35px; width: 100%; }
+.part_2 > .bottom_shape, .part_3 > .bottom_shape { width: 100%;margin-left: 16%; }
+.bootom_link ul > a > li { float: left; width: 100%; list-style: none; background: url(../images/---.png) no-repeat scroll left top 12px rgba(0, 0, 0, 0); padding: 3px 0 0 20px; margin: 0; margin-bottom: 11px; font-size: 15px; letter-spacing: 1px; font-style: normal; color: #000; }
+.bootom_link ul > a > li:hover { color: #00a9ee; }
+.add_desk, .call_desk, .mail_desk { float: left; width: 100%; display: inline-block; margin-top: 18px; }
+.add_desk { margin-top: 40px !important; }
+.foot_ico_left { float: left; margin-right: 10px; display: inline-block; }
+.foot_cont_right { float: right; width: 88%; }
+.foot_cont_right h3 { font-family: 'Lato-Bold'; font-size: 21px; margin-bottom: 5px; line-height: 24px; color: #000; text-align: left; }
+.foot_cont_right p, .foot_cont_right p > a { font-size: 15px; letter-spacing: 1px; line-height: 26px; color: #000; word-wrap: break-word; margin-top: 0px; }
+.part_2 h2, .part_3 h2 { color: #000; font-style: italic; font-size: 19px; margin-bottom: 15px; letter-spacing: 0.5px; margin-left: 15%;}
+.copyrigthdesk01 { float: left; display: inline-block; width: 100%; background-color: #000; }
+.coprleft { float: left; padding-top: 16px; padding-bottom: 16px; display: inline-block; padding-left: 6%;}
+.copyright { float: right; padding-left: 11px; padding-right: 11px; padding-top: 16px; padding-bottom: 16px; display: inline-block; background-color: #00aeef; }
+.coprleft p { font-size: 19px; color: #fff; letter-spacing: 0.8px; }
+.copyright p > a { padding-left: 15px; padding-right: 15px;font-weight: bold; }
+.view { }
+.copyright p > a:hover { color: #000;
+ }
+.accorddesk01 { float: left; display: none; width: 100%; }
+.accordion-trigger { background-color: #D71A23; display: block; padding: 13px; position: relative; color: #000; font-style: italic; font-size: 19px; margin-bottom: 15px; letter-spacing: 0.5px; }
+.accordion-trigger.expanded:hover, .accordion-trigger.expanded:hover { color: #000 !important; }
+.accordion-trigger:after { display: block; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: 2em; }
+.accordion-trigger.expanded:after { content: "-"; }
+.accordion-trigger.collapsed:after { content: "+"; }
+.accordion-content { overflow: hidden; -webkit-transition: height 0.25s; -moz-transition: height 0.25s; transition: height 0.25s; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+.accordion-content.expanded { height: auto; background-color: #e4e7ec; }
+.accordion-content.collapsed { height: 0; }
+.accordion-content p { padding: 16px; }
+.accorddesk01 > ul > li > a:hover { color: #000 !important; }
+.rgdev-submenu-item a::before { -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; border-color: transparent transparent transparent #000; border-image: none; border-style: solid; border-width: 5px; content: ""; left: 13px; margin-top: 0; position: absolute; top: 15px; z-index: 1; }

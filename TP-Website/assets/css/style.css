@@ -1,0 +1,101 @@
+/* gray : #4B4B4D
+   Red: #ED3237  */
+   body {
+    background: #fff;
+    color: #4B4B4D;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 0;
+    line-height: inherit;
+    letter-spacing: .1px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ .main_container{
+  padding-top: 97px;
+} 
+/* About-Us Start */
+#about-banner{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    opacity: 3;
+}
+#about-img{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+#about-img img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    opacity: 0.9;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+}
+#about-text{
+    position: absolute;
+    opacity: 2;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    color: #4B4B4D;
+    font-size: larger;
+    padding-top: 2%;
+    z-index: 1;
+}
+#about-text p{
+    font-size: 20px;
+}
+
+#heading{
+    text-align: center;
+    margin-top: -4%;
+    letter-spacing: 2px;
+}
+#discover_heading{
+    position: relative;
+font-family: 'thisregular';
+font-size: 75px;
+font-size: 7vw;
+font-weight: 400;
+letter-spacing: 0;
+text-transform: none;
+padding: 0 0;
+margin: 0 -72px -40px;
+color: teal;
+}
+#discover_heading #heading_big {
+    top: 9px;
+    position: relative;
+    top: 10px;
+    font-size: 1.22em;
+    padding: 0 72px;
+    margin: 0 -72px;}
+#secondry_heading{
+    position: relative;
+z-index: 1;
+margin: 0 -.1em 0 0;
+letter-spacing: .2em;
+}
+.separator--flower {
+    margin: 24px 0;
+    font-size: 17px;
+    font-family: Serif;
+    color: #9a9998;}
+/* About-Us End */
