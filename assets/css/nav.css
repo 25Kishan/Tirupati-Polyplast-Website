@@ -60,6 +60,7 @@ transform: rotate(135deg);
 
 .animated-icon1.open span:nth-child(2) {
 opacity: 0;
+left: -60px;
 }
 
 .animated-icon1.open span:nth-child(3) {

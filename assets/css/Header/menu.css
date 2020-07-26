@@ -418,7 +418,7 @@ margin-right: 15px;
         padding: 30px;
         color: #ddd;
         font-size: 12px;
-        font-weight: 700
+        font-weight: 700;
     }
     .button {
         width: 55px;
@@ -536,6 +536,9 @@ margin-right: 15px;
     #menu > ul > li.has-sub > ul > li.active > a,
     #menu > ul ul > li.has-sub > ul > li.active > a {
         border-top: none
+    }
+    .main_container{
+        padding-top: 61px !important;
     }
 }
 

@@ -262,30 +262,6 @@ html {
       left:25%;
       bottom: 3%;
     }
-    #svg_image{
-    margin-top: 123%;
-    }
-    #about-banner{
-        height: 600px;
-    }
-    .slider, .slider > div{
-        height: 300px;
-        
-    }
-    #svg_img{
-        margin-top: -270%;
-    } 
-    .preloader-inner{
-      right: 15%;
-      bottom: 15%;
-    }
-    #discover_heading{
-        font-size: 18vw;
-    }
-    #secondry_heading {
-        margin: 11px -0.1em 0px 0;
-        font-size: 26px;
-    }
 }
 svg{
     fill:currentColor;
