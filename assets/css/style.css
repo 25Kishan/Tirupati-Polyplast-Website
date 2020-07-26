@@ -26,6 +26,80 @@
  .main_container{
   padding-top: 97px;
 } 
+/* Preloder Start */
+.preloader
+{   background-color:#f7f7f7;
+    width:100%;height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:999999;
+    -webkit-transition:.6s;
+    -o-transition:.6s;
+    transition:.6s;
+    margin:0 auto}
+.preloader .preloader-circle{
+    width:100px;
+    height:100px;
+    position:relative;
+    border-style:solid;
+    border-width:1px;
+    border-top-color:#ff1f1f;
+    border-bottom-color:black;
+    border-left-color:#ff1f1f;
+    border-right-color:black;
+    z-index:10;
+    border-radius:50%;
+    -webkit-box-shadow:0 1px 5px 0 rgba(35,181,185,0.15);
+    box-shadow:0 1px 5px 0 rgba(35,181,185,0.15);
+    background-color:#fff;
+    -webkit-animation:zoom 2000ms infinite ease;
+    animation:zoom 2000ms infinite ease;
+    -webkit-transition:.6s;
+    -o-transition:.6s;transition:.6s}
+.preloader .preloader-circle2{
+    border-top-color:#657588}
+    .preloader .preloader-img{
+        position:absolute;
+        top:50%;
+        z-index:200;
+        left:0;
+        right:0;
+        margin:0 auto;
+        text-align:center;
+        display:inline-block;
+        -webkit-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);
+        transform:translateY(-50%);
+        padding-top:6px;
+        -webkit-transition:.6s;
+        -o-transition:.6s;
+        transition:.6s}
+     .preloader .preloader-img img{max-width:55px;margin-left: 30%;} 
+    .preloader .pere-text strong{
+        font-weight:800;color:#dca73a;text-transform:uppercase}
+        @-webkit-keyframes zoom{
+            0%{-webkit-transform:rotate(0deg);
+                transform:rotate(0deg);
+                -webkit-transition:.6s;
+                -o-transition:.6s;transition:.6s}
+            100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+                -webkit-transition:.6s;
+                -o-transition:.6s;transition:.6s}}
+        @keyframes zoom{
+            0%{-webkit-transform:rotate(0deg);
+                transform:rotate(0deg);
+                -webkit-transition:.6s;
+                -o-transition:.6s;transition:.6s}
+            100%{-webkit-transform:rotate(360deg);
+                transform:rotate(360deg);-webkit-transition:.6s;-o-transition:.6s;transition:.6s}}
+
+
+/* Preloder End */
 /* About-Us Start */
 #about-banner{
     width: 100%;
@@ -50,23 +124,29 @@
 #about-text{
     position: absolute;
     opacity: 2;
-    margin-top: 3%;
     margin-left: 10%;
     margin-right: 10%;
     justify-content: center;
     color: #4B4B4D;
     font-size: larger;
-    padding-top: 2%;
-    z-index: 1;
+    z-index: 2;
+    text-align: center;
+    width: 80%;
 }
-#about-text p{
-    font-size: 20px;
+#about-data p{
+    position: absolute;
+    z-index: 2;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 12%;
+     font-size: 25px; 
 }
 
 #heading{
     text-align: center;
     margin-top: -4%;
     letter-spacing: 2px;
+    justify-content: space-around;
 }
 #discover_heading{
     position: relative;
@@ -88,14 +168,63 @@ color: teal;
     padding: 0 72px;
     margin: 0 -72px;}
 #secondry_heading{
-    position: relative;
+position: relative;
 z-index: 1;
 margin: 0 -.1em 0 0;
-letter-spacing: .2em;
+letter-spacing: .1em;
+margin-top: 1.4%;
 }
 .separator--flower {
     margin: 24px 0;
     font-size: 17px;
     font-family: Serif;
     color: #9a9998;}
+    /* For Mobile */
+@media only screen and (max-width:500px) {
+  #about-banner{
+    width: 100%;
+  }
+  #about-img{
+      width: 100%;
+  }
+  #about-img img{
+      opacity: 0;
+      width: 100%;
+  }
+  #secondry_heading{
+    margin-top: 6.4%;
+    font-size: 8vw;
+  }
+  #discover_heading{
+      margin-left: 6%;
+    font-size: 18vw;
+  }
+  #about-data{
+      width: 100%;
+      padding-top: 30%;
+  }
+  #about-data h2{
+      margin-left: 10%;
+      margin-right: 10%;
+
+  }
+  #about-text{
+      width: 89%;
+      margin-left: -8% !important;
+      margin-right: 0% !important;
+  }
+  #secondry_heading{
+      margin-left: 30%;
+  }
+  .separator--flower{
+    margin-left: 25%;
+    margin-top: 2%;
+  }
+}
+/* For Tablet */
+@media only screen and (max-width:1024px) {
+  
+    
+}
+
 /* About-Us End */

@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="assets/css/Main_Slider/Slider.css">
 </head>
 <body>
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/images/title_logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="region-inner clearfix">
         <header class="headerCont">
             <div class="headerInrCont">
@@ -61,7 +71,8 @@
                 </nav>
             </div> 
         </header>
-        <main class="main_container">
+    </div>
+    <main class="main_container">
             <div class="slider" id="slider1">
                 <!-- Slides -->
                 <div id="slider_image"><img src="assets/images/bottle=machine.jpg" alt=""></div>
@@ -75,11 +86,37 @@
                 <div id="svg_image">
                     <img id="svg_img" src="assets/images/mask-header.png" alt="">
                 </div>
-                
-        </main>
-    </div>
+                <section id="about-banner">
+                     <div id="about-text">
+                      <div id="heading">
+                        <h2 id="discover_heading"><span id="heading_big">D</span>iscover</h2>
+                        <h1 id="secondry_heading">Our Story</h1>
+                        <div class="pixcode  pixcode--separator  separator separator--flower separator_color--color">
+                          ✻
+                        </div>
+                      </div>
+                    </div>
+                    <div id="about-data">
+                        <div id="about-img">
+                            <img src="assets/images/abstract-paper-hexagon-white-background_51543-7.jpg" alt="">
+                          </div>
+                        <p text-align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                  </section>
+                </main>
     <script src="assets/js/Header/Nav_bar.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/Slider/slider.js"></script>
+    <script>
+          // Preloder
+      $(window).on('load', function () {
+      $('#preloader-active').delay(450).fadeOut('slow');
+      $('body').delay(450).css({
+        'overflow': 'visible'
+      });
+    });
+
+//END
+    </script>
 </body>
 </html>
