@@ -183,7 +183,7 @@ margin-top: 1.4%;
 @media only screen and (max-width:500px) {
   #about-banner{
     width: 100%;
-    height: 850px;
+    height: 950px;
   }
   #about-img{
       width: 100%;
@@ -193,12 +193,12 @@ margin-top: 1.4%;
       width: 100%;
   }
   #secondry_heading{
-    margin-top: 6.4%;
-    font-size: 8vw;
+    margin-top: 10.4%;
+    font-size: 10vw;
   }
   #discover_heading{
       margin-left: 6%;
-    font-size: 18vw;
+    font-size: 20vw;
   }
   #about-data{
       width: 100%;
@@ -210,12 +210,12 @@ margin-top: 1.4%;
 
   }
   #about-text{
-      width: 89%;
-      margin-left: -8% !important;
-      margin-right: 0% !important;
+      /* width: 89%; */
+      margin-left: -4% !important;
+      /* margin-right: 0% !important; */
   }
   #secondry_heading{
-      margin-left: 30%;
+      margin-left: 40%;
   }
   .separator--flower{
     margin-left: 25%;
@@ -592,7 +592,7 @@ text-align: center;
       height: 100px;
     }
     .why-us{
-        height: 725px;
+        height: 850px;
     }
     
   }
