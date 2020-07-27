@@ -183,7 +183,7 @@ margin-top: 1.4%;
 @media only screen and (max-width:500px) {
   #about-banner{
     width: 100%;
-    height: 950px;
+    height: 1000px;
   }
   #about-img{
       width: 100%;
@@ -233,7 +233,7 @@ margin-top: 1.4%;
 .why-us{
     margin-top: 0%;
     width: 100%;
-    height: 526px;
+    height: 400px;
     background-image: url(../images/why-us.jpeg);
     position: relative; 
 }
@@ -478,7 +478,7 @@ width: 50%;
   padding: 15px;
   /* margin: 0 -15px 0; */
   margin-left: 35%;
-  margin-top: -2%;
+  /* margin-top: -2%; */
   text-decoration: none !important;
 }
 .exp_more_text{
@@ -603,3 +603,173 @@ text-align: center;
   }
   
   /* About-Us End */
+  /* Whole */
+  .prod_img{
+    width: 100%;
+    /* float: left; */
+    height: 400px;
+    /* background-color: pink; */
+    position: relative;
+    /* margin-top: -3%; */
+}
+.prod_img img{
+    width: 100%;
+    height: 400px;
+
+}
+  .prod_text{
+    width: 100%;
+    /* float: right; */
+    /* margin-top: 9%; */
+    position: absolute;
+}
+.prod_text h2{
+    text-align: center;
+    font-size: 60px;
+    margin-top: -22%;
+    color: white;
+}
+.prod_text p{
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 2%;
+    font-size: 20px;
+    color: black;
+}
+.btl_basic{
+    width: 100%;
+    height: 400px;
+    background: #ECE9E6;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+}
+.btl_basic_img{
+    width: 100%;
+    /* float: right; */
+    height: 400px;
+    /* background-color: pink; */
+    position: relative;
+    /* margin-left: 44%; */
+    margin-top: -3%;
+}
+.btl_basic_img img{
+    width: 100%;
+    height: 440px;
+
+}
+.btl_basic_text{
+    width: 100%;
+    position: absolute;
+    margin-top: -10%;
+}
+.btl_basic_text h2{
+    text-align: center;
+    font-size: 60px;
+    margin-top: -9%;
+    margin-left: -6%;
+    color: #fff;
+}
+.btl_basic_text p{
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 2%;
+    font-size: 20px;
+    color: black;
+}
+.qlity_slant_1{
+    position: absolute;
+    width: 38%;
+    height: 15px;
+    background: inherit; 
+}
+.qlity_slant_1::after{
+    position: absolute;
+    width: 38%;
+    height: 100%;
+    content: '';
+    background: black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(125deg);
+    margin-left:120%;
+    margin-top: -10%;
+}
+#qlity_slant_2{
+    margin-top: 13%;
+}
+/* .capacity_slant_2{
+    margin-top: %;
+} */
+.know_more{
+    width: 100%;
+    height: 395px;
+    background: #ECE9E6;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+    margin-top: 30%;
+}
+.know_more_img{
+width: 100%;
+    /* float: left; */
+    height: 450px;
+    /* background-color: pink; */
+    position: relative;
+    margin-top: -4%;
+}
+.know_more_img img{
+    width: 100%;
+    height: 450px;
+
+}
+.know_more_slant_2 img{
+    margin-top: 8%;
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#capacity_slant_1{
+    margin-top: 21%;
+}
+.know_more_text{
+    width: 100%;
+    /* float: right; */
+    position: absolute;
+    margin-top: -15%;
+}
+.know_more_text h2{
+    text-align: center;
+    font-size: 60px;
+    margin-top: -9%;
+    color:#fff;
+}
+.know_more_text p{
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-top: 2%;
+    font-size: 20px;
+    color: black;
+}
+#pro_btl_know{
+    height: 1032px;
+    width: 100%;
+    /* background-color: tomato; */
+    position: relative;
+}
+#indust_we_serve_btm{
+    position: absolute;
+    z-index: 2;
+}
+footer{
+    width: 100%;
+    /* margin-top: 7%; */
+    height: 350px;
+    background: linear-gradient(to bottom right, #d3d3d3 0%, #ffffff 100%);
+}

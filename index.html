@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="assets/css/Header/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/Main_Slider/Slider.css">
+    <link rel="stylesheet" href="assets/css/Main_Slider/industry_we_serve.css">
+    <link rel="stylesheet" href="assets/css/Footer/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="preloader-active">
@@ -113,53 +116,15 @@
                     </div>
                    </div>
                  </section>
-                 <!-- <section class="slant_a_why_us">
-                   <div class="sustainability">
-                     <div class="sust_img">
-                       <img src="assets/images/sustainability-img.png" alt="">
-                     </div>
-                    
-                     <div class="sust_text">
-                       <h2>Sustainability</h2>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       <a class="exp_more_btn" href="">
-                         <span class="exp_more_text">Explore More</span>
-                       </a>
-                     </div>
-                   </div>
-                   <div class="quality">
-                     <div class="qlity_img">
-                       <img src="assets/images/quality-img.png" alt="">
-                     </div>
-                     <div class="qlity_text">
-                       <h2>Quality</h2>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       <a class="exp_more_btn" id="exp_more_btn_id" href="">
-                         <span class="exp_more_text">Explore More</span>
-                       </a>
-                     </div>
-                   </div>
-                   <div class="capacity">
-                     <div class="capacity_img">
-                         <img src="assets/images/product-img.png" alt="">
-                     </div>
-                     <div class="capacity_text">
-                       <h2>Capacity</h2>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       <a class="exp_more_btn" href="">
-                         <span class="exp_more_text">Explore More</span>
-                       </a>
-                     </div>
-                     <div class="capacity_slant_2">
-                       <img src="assets/images/bottom-curve_b.png" alt="">
-                     </div>
-                   </div> 
-                 </section> -->
 
+                 
                 </main>
     <script src="assets/js/Header/Nav_bar.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/Slider/slider.js"></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/imagesloaded.pkgd.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/hammer.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/sequence.min.2.1.0.js'></script>
     <script>
           // Preloder
       $(window).on('load', function () {
@@ -170,6 +135,22 @@
     });
 
 //END
+// Industry We serve
+// imagesLoaded.js, Hammer.js, and Sequence.js loaded as external assets
+
+
+var sequenceElement = document.getElementById("sequence");
+
+var options = {
+  keyNavigation: true,
+  animateCanvas: false,
+  phaseThreshold: false,
+  reverseWhenNavigatingBackwards: true
+}
+
+var mySequence = sequence(sequenceElement, options);
+ 
+// End
     </script>
 </body>
 </html>
