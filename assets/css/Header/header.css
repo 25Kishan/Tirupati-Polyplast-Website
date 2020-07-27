@@ -137,8 +137,9 @@
 @media only screen and (max-width:1024px) {
 
     .mainLogo img {
-        max-width: 90px;
-        margin-top: 8%;
+        max-width: 108px;
+        margin-top: 12%;
+        height: 90px;
     }
 
 .headerCont, .headerCont.sticky{

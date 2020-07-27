@@ -419,6 +419,7 @@ margin-right: 15px;
         color: #ddd;
         font-size: 12px;
         font-weight: 700;
+        height: 100px;
     }
     .button {
         width: 55px;
@@ -428,6 +429,7 @@ margin-right: 15px;
         top: 0;
         cursor: pointer;
         z-index: 12399994;
+        margin-top: 8%;
     }
     .button:after {
         position: absolute;
