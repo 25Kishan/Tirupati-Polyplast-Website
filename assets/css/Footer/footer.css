@@ -1,4 +1,4 @@
-.footerdesk01 { float: left; display: inline-block; width: 100%;  background: linear-gradient(to bottom right, #d3d3d3 0%, #ffffff 100%); padding-top: 13%; padding-bottom: 40px; padding-left:6%; }
+.footerdesk01 { float: left; display: inline-block; width: 100%;  background: linear-gradient(to bottom right, #d3d3d3 0%, #ffffff 100%); padding-bottom: 40px; padding-left:6%; }
 /*footer default style*/
 
 .footer_desk { float: left; display: inline-block; margin-top: -2%; background-color: transparent; background-repeat: no-repeat; background-image: url(../images/footer_bg_1.png); background-size: cover; background-position: right top; width: 100%; height: 100%; }
@@ -26,8 +26,11 @@
 .copyright { float: right; padding-left: 11px; padding-right: 11px; padding-top: 16px; padding-bottom: 16px; display: inline-block; background-color: #00aeef; }
 .coprleft p { font-size: 19px; color: #fff; letter-spacing: 0.8px; }
 .copyright p > a { padding-left: 15px; padding-right: 15px;font-weight: bold; }
+p a{
+    color: teal;
+}
 .view { }
-.copyright p > a:hover { color: #000;
+.copyright p > a:hover { color: #fff;
  }
 .accorddesk01 { float: left; display: none; width: 100%; }
 .accordion-trigger { background-color: #D71A23; display: block; padding: 13px; position: relative; color: #000; font-style: italic; font-size: 19px; margin-bottom: 15px; letter-spacing: 0.5px; }
