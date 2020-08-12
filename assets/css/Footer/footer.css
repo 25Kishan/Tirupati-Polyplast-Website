@@ -1,0 +1,37 @@
+.social{list-style-type:none;padding:10px 0 0;margin:0}
+.social li{display:inline-block;padding: 0px 4px;}
+.social a{margin-right:5px;cursor:pointer;display:block;width: 45px;height: 45px;text-align:center;padding-top: 9px;text-decoration:none;color: #080808;border-radius: 5px;font-size: 25px !important;/* background: #000; */border: 1px solid #909090;}
+.social a:hover{background: #ed3439;color:#fff;border-color:transparent}
+.social .fb:hover{background: #3b5998  ;}
+.social .ig:hover{background: #dd2a7b ;}
+.social .tw:hover{background: #00acee ;}
+.social .yu:hover{background: #c4302b  ;}
+ul,ol{padding:0;margin:0;list-style:none}
+.footer{font-size:13px;padding-top:45px;position:relative;background: #373c40;font-weight: 400;letter-spacing: 0.2px;}
+.footer hr{border-color: #ffffff24;}
+.footer p{color: #cccccc;font-size: 14px;line-height: 26px;margin-left: 7%;margin-top: -6%;}
+.footer a{color: #cccccc;font-size: 14px;line-height: 26px;}
+.footer ul.list li{list-style: none;margin: 4px 0 0px 2px;position:relative;}
+/*.footer ul.list li:before{position:absolute;font-size: 9px;top: 1px;left: -15px;font-family: "Font Awesome 5 Free";content: "\f054";font-weight: 900;color: #e6e6e6a3;}*/
+.footer ul.list li a:hover{opacity: 0.7;}
+.footer ul.list li i{padding: 0 8px 0 0;}
+.footer h3{color: #ffffff;font-size: 25px;letter-spacing: 1px;margin-top: 0;/* margin-bottom: 25px; */padding-bottom: 10px;position: relative;font-weight: 400;}
+/*.footer img{padding: 10px 0px;margin-top: -21px;}*/
+.footer .address li{margin: 4px 0 !important;}
+.footer .address h4{font-size: 16px;font-weight: 500 !important;color: #e6e6e6;}
+.footer .address i{display:inline-block;margin:6px 8px 0 0;vertical-align:top;color: #cccccc;font-size:15px;}
+.footer .address h4 i{margin:2px 8px 0 0;}
+.ftlogo{text-align:center;border-top: 1px solid #4c5256;padding: 10px 0 15px 0;margin-top: 25px;}
+/* .ftlogo h3{width: 380px;} */
+.ftlogo h3 + p{width: 50%;font-size: 16px;margin: 0 auto 15px auto;}
+.ftlogo ul.mnu{margin: 0;font-size: 13px;color: #bfbfbf;text-align:center}
+.ftlogo ul.mnu li{display:inline-block;position:relative;padding: 0 8px;}
+.ftlogo ul.mnu li:before{position: absolute;width: 3px;height: 3px;top: 50%;left: -2px;content: '';-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);background-color: #d8d8d8;}
+.ftlogo ul.mnu li:first-child:before{content: none}
+.ftlogo ul.mnu li a{
+    font-weight: 400;
+}
+
+.copyrights{padding: 19px 0;overflow: hidden;border-top: 1px solid #4c5256;}
+.copyrights p,.copyrights a{margin: 0;font-size: 15px;color: #bfbfbf;}
+
