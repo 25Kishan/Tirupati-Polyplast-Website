@@ -222,12 +222,6 @@ margin-top: 1.4%;
     margin-top: 2%;
   }
 }
-/* For Tablet */
-@media only screen and (max-width:1024px) {
-  
-    
-}
-
 /* About-Us End */
 /* Why US */
 .why-us{
@@ -687,7 +681,7 @@ text-align: center;
     .gridlayout1 li a div h3 {
       width: 100%;
       color: #fff;
-      font-size: 20px;
+      font-size: 35px;
       padding: 0; margin:0;
     }
     
@@ -777,23 +771,45 @@ text-align: center;
 margin-bottom: 7%;
 width: 100%;
 }
-.atul-foundation{padding:60px 0 160px;}
-.social-dimension{margin: -150px 0 -100px; padding: 60px 0 130px;}
-.enconomic-dimension{padding: 70px 0 140px;}
-.environmental-dimension{padding: 70px 0 40px;}
-
+.atul-foundation{padding:60px 0 160px !important;}
+.atul-foundation .text{display: none !important;}
+.atul-foundation .title_products{font-size: 35px !important;}
+.social-dimension{margin: -150px 0 -100px; padding: 60px 0 130px !important;}
+.social-dimension .text{display: none !important;}
+.social-dimension .title_btl{font-size: 35px !important;}
+.enconomic-dimension{padding: 70px 0 140px !important;}
+.enconomic-dimension .text{display: none !important;}
+.enconomic-dimension .title_more{font-size: 35px !important;}
+.environmental-dimension{padding: 70px 0 40px !important;}
+.mobile_products{display: block !important;}
+.businesswrapper{display: none;}
 
   }
   /* For Tablet */
   @media only screen and (max-width:1024px) {
-    .atul-foundation{padding:60px 0 160px;}
-.social-dimension{margin: -150px 0 -100px; padding: 60px 0 130px;}
-.enconomic-dimension{padding: 70px 0 140px;}
-.environmental-dimension{padding: 70px 0 40px;}
+    .atul-foundation{padding:60px 0 160px !important;}
+.social-dimension{margin: -150px 0 -100px !important; padding: 60px 0 130px !important;}
+.enconomic-dimension{padding: 70px 0 140px !important;}
+.environmental-dimension{padding: 70px 0 40px !important;}
+#discover_heading{font-size: 9vw !important;}
+#secondry_heading{margin-top: 5.4% !important;}
+.why-us{height: 580px !important;}
+.exp_more_btn {
+  margin-left: 14% !important;
+  margin-right: 14% !important;
+}
+.exp_more_text{width: 100%;}
+.sust_img img {
+  height: 370px !important;}
+.sustainability{height: 370px !important;}
+.quality{margin-top: 48% !important;}
+.capacity{margin-top: 93% !important;}
+.capacity_slant_2 img {
+  margin-top: 22% !important;}
+.slant_a_why_us{height: 1120px;}
+#about-data p{margin-top: 17% !important;}
 
-      
-  }
-  
+}
   /* About-Us End */
   /* Whole */
   
@@ -910,7 +926,7 @@ width: 100%;
 }
 /* END Products */
 /* Btl Basics */
-.social-dimension {background: url(../images/social-dimension.png) no-repeat center top; padding:210px 0; margin:-180px 0 -100px; background-size: cover; text-align:center; z-index:99; position:relative; }
+.social-dimension {background: url(../images/social-dimension.png) no-repeat center top; padding:210px 0; margin:-180px 0 -100px; background-size: cover; text-align:center; z-index:1; position:relative; }
 .social-dimension .title_btl { margin:0 auto 20px auto; padding:0; color:#fff; text-align:center; font-size:60px; line-height:30px; }
 .social-dimension .text { margin:0 auto 20px auto; padding:0; color: lightgoldenrodyellow;
   font-size: 20px;
@@ -921,7 +937,7 @@ width: 100%;
 .social-dimension .link a:hover { background:#fff; color:#464646;}
 /* End Btl Basics */
 /* Know_more */
-.enconomic-dimension {background: url(../images/enconomic-dimension.png) no-repeat center top; padding:220px 0; background-size: cover; text-align:center; z-index:99; position:relative; }
+.enconomic-dimension {background: url(../images/enconomic-dimension.png) no-repeat center top; padding:220px 0; background-size: cover; text-align:center; z-index:1; position:relative; }
 .enconomic-dimension .title_more { margin:0 auto 20px auto; padding:0; color:#ffffff; text-align:center; font-size:60px; line-height:30px; }
 .enconomic-dimension .text { margin:0 auto 20px auto; padding:0; color: lightgoldenrodyellow;
   font-size: 20px;
@@ -932,12 +948,6 @@ width: 100%;
 .enconomic-dimension .link a:hover { background:#fff; color:#464646;}
 
 /* End Know More */
-footer{
-    width: 100%;
-    /* margin-top: 7%; */
-    height: 350px;
-    background: linear-gradient(to bottom right, #d3d3d3 0%, #ffffff 100%);
-}
 /* About-Us Page */
 .page-title {
   position:relative;
@@ -1482,3 +1492,86 @@ footer{
   margin-bottom: 1%;
  }
 /* Bottle Basics End */
+/* Whatsapp & Call */
+.hdwatsp{position: fixed;bottom: 10px;right: 10px;z-index:21/*top: 2px!important;position: absolute !important;left: 0;right: 0;margin: 0 auto;width: 100%;text-align: center;*/}
+.hdwatsp a{text-align: center;width: 45px;height: 45px;float: left;color: #FFFFFF;border-radius: 10px;background-color: #ee141f;}
+.hdwatsp a.wh{background-color: #25D366;}
+.hdwatsp a.wh i{font-size: 32px;margin-top: 15%;}
+.hdwatsp i{font-size: 35px;margin-top: 16%;}
+.leftsp{margin-left:7px}
+
+#myBtn {
+  display: none; /* Hidden by default */
+ cursor: pointer;
+    position: fixed;
+    z-index: 10000;
+    right: 15px;
+    bottom: 65px;
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 40px;
+    height: 40px;
+    color: rgb(249, 249, 249);
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    padding: 8px
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* End */
+/* Products Section */
+.businesswrapper { background:#f4ebdd;}
+
+.businessrow1 { background:#f4ebdd;}
+.businessrow2 { background:#f4ebdd;}
+
+.businessrow1 .businessleft { width:640px; float:left;}
+.businessrow1 .businessright { width:560px; float:right;}
+
+.businessrow2 .businessleft { width:560px; float:left;}
+.businessrow2 .businessright { width:640px; float:right;}
+
+.businesstext { width:67%; margin:0 auto; padding:90px 0 0 0; text-align:center;}
+.businesstext.polymer_ratail{ width:67%; margin:0 auto; padding:50px 0 0 0; text-align:center;}
+.businesstext.popm { width:67%; margin:0 auto; padding: 40px 0 0 0; text-align:center;}
+.businesstext h2 { font-size:30px; line-height:30px; margin:0 auto; padding:0 0 20px 0; text-align:center;}
+.businesstext h3 { font-size:16px; line-height:26px; margin:0 auto; padding:0 0 20px 0;  text-align: justify;}
+
+
+.businessimg .aligncenter {
+    display: block;
+    margin: 0 auto; width:100%;
+}
+.businessimg img {
+    width:100%;
+}
+/* .businesstext .link a { display:inline-block; border:#8da79d 1px solid; background:transparent; color:#8da79d; padding:9px 15px 6px 15px; font-size:14px; line-height:16px; letter-spacing:1px; text-transform:uppercase;}
+.businesstext .link a:hover { background:#8da79d; border:#8da79d 1px solid; color:#fff;  } */
+
+
+.galleria-image-nav-right { opacity:1!important;}
+.galleria-image-nav-left { opacity:1!important;}
+
+.businessrow3 .businessleft { width:53.5%; float:left;}
+.businessrow3 .businessright { width:46%; float:right; margin-top: 3%;}
+
+.businessrow4 .businessleft { width:46%; float:left; margin-top: 3%;}
+.businessrow4 .businessright { width:53.5%; float:right;}
+
+.aromatics-main { background: url(../images/aeromatic_businesspage.jpg) no-repeat right top; background-size: cover;  text-align:center; min-height:390px; }
+.bulk-chemicals-main { background: url(../images/bulk-chemicals-main_businesspage.jpg) no-repeat left top; background-size: cover; text-align:center; min-height:390px; }
+.colors-main { background: url(../images/colors_businesspage.jpg) no-repeat right top; background-size: cover;  text-align:center; min-height:390px; }
+.floras-main { background: url(../images/flora_business_page.jpg) no-repeat left top; background-size: cover;  text-align:center; min-height:390px; }
+.cp-bulk-main { background: url(../images/cp_ba_businesspag.jpg) no-repeat left top; background-size: cover; text-align:center; min-height:390px; }
+.cp-brands-main { background: url(../images/cp-brands-main.jpg) no-repeat right top; background-size: cover;  text-align:center; min-height:390px; }
+.pharma-main { background: url(../images/pharma-main.jpg) no-repeat right top;  background-size: cover; text-align:center; min-height:390px; }
+.polymer-performance-main { background: url(../images/polymer-performance-main.jpg) no-repeat left top; background-size: cover; text-align:center; min-height:390px; }
+.polymer-retail-main { background: url(../images/polymer-retail-main.jpg) no-repeat right top;  background-size: cover; text-align:center; min-height:390px; }
+.row{margin-right: 0px !important;
+  margin-left: 0px !important;}
+/* End Products Section  */
