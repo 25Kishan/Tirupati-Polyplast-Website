@@ -392,6 +392,9 @@
          height: 50px;
          width: 25px;
      }     
+     .seq::after{
+       background-image: none;
+     }
  }
  @media only screen and (max-width:1024px)and (min-width:600px) {
   .seq{
