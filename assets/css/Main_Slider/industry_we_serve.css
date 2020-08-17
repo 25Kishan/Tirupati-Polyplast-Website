@@ -390,10 +390,14 @@
      }
      .seq-pagination li{
          height: 50px;
-         width: 25px;
+         width: 22px;
      }     
      .seq::after{
        background-image: none;
+     }
+     .seq-next, .seq-prev{
+       font-size: 0.10em !important;
+       padding: 0.10em !important;
      }
  }
  @media only screen and (max-width:1024px)and (min-width:600px) {
