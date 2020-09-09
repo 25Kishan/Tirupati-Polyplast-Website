@@ -19,9 +19,10 @@ $(document).ready(function () {
       $.fn.sliderResponsive = function(settings) {
         
         var set = $.extend( 
+
           {
             slidePause: 5000,
-            fadeSpeed: 800,
+            fadeSpeed: 1500,
             autoPlay: "on",
             showArrows: "off", 
             hideDots: "off", 

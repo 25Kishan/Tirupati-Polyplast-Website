@@ -1,0 +1,11 @@
+/* Start About Us */
+@media only screen and (max-width:500px) {
+    .text-block h1{
+        font-size: 50px;
+        margin-top: 5%;
+    }
+    .text-block h2{
+        letter-spacing: 0.2em;
+    }
+  }
+  /* End About Us */

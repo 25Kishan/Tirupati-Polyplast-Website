@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/Main_Slider/Slider.css">
     <link rel="stylesheet" href="assets/css/Main_Slider/industry_we_serve.css">
     <link rel="stylesheet" href="assets/css/Footer/footer.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -80,6 +81,8 @@
         </header>
     </div>
     <main class="main_container">
+      <div class="main_slider_part">
+          
             <div class="slider" id="slider1">
                 <!-- Slides -->
                 <div id="slider_image"><img src="assets/images/bottle=machine.jpg" alt=""></div>
@@ -88,45 +91,46 @@
                 <div id="slider_image"><img src="assets/images/corporate-example-image-01.jpg" alt=""></div>
                 <div id="slider_image"><img src="assets/images/bottle=machine.jpg" alt=""></div>
                 <!-- The Arrows -->
-            <br>        
+            <br>     
+              </div>
+              
                 </div>
-                <div id="svg_image">
+                <div id="scroll-down-animation">
+                  <h2>Scroll To Explore</h2>
+                  <span class="mouse">
+                    <span class="move"></span>
+                  </span>
+                </div> 
+                <!--  -->
+                <!-- <div id="svg_image">
                     <img id="svg_img" src="assets/images/mask-header.png" alt="">
-                </div>
-                <section id="about-banner">
-                     <div id="about-text">
-                      <div id="heading">
-                        <h2 id="discover_heading"><span id="heading_big">D</span>iscover</h2>
-                        <h1 id="secondry_heading">Our Story</h1>
-                        <div class="pixcode  pixcode--separator  separator separator--flower separator_color--color">
-                          ✻
-                        </div>
-                      </div>
-                    </div>
-                    <div id="about-data">
-                        <div id="about-img">
-                            <img src="assets/images/abstract-paper-hexagon-white-background_51543-7.jpg" alt="">
-                          </div>
-                        <p text-align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                  </section>
+                </div> -->
+                <div class="row" id="container_img">
+                  <img src="assets/images/disc-background.jpg" alt="">
+                  <div class="col text-block">
+                      <h1>Discover</h1>
+                      <h2>Our Story</h2>
+                      <p text-align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  </div>
+              </div>
                   <section class="why-us">
-                    <div id="why-us-top-slant">
-                     <img src="assets/images/top-curve_b.png" alt="">
                     <div id="why-us-text">
                      <h2 align="center">Why Us?</h2>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                      
                     </div>
-                   </div>
                  </section>
                  <section class="slant_a_why_us">
                   <div class="sustainability">
-                    <div class="sust_img">
+                    <div class="sust_img" data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000">
                       <img src="assets/images/sustainability-img.png" alt="">
                     </div>
                    
-                    <div class="sust_text">
+                    <div class="sust_text" data-aos="fade-left" data-aos-offset="300"
+                    data-aos-duration="1000" data-aos-easing="ease-in-sine">
                       <h2>Sustainability</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                       <a class="exp_more_btn" href="">
@@ -135,10 +139,14 @@
                     </div>
                   </div>
                   <div class="quality">
-                    <div class="qlity_img">
+                    <div class="qlity_img" data-aos="fade-left" data-aos-offset="300"
+                    data-aos-duration="1000" data-aos-easing="ease-in-sine">
                       <img src="assets/images/quality-img.png" alt="">
                     </div>
-                    <div class="qlity_text">
+                    <div class="qlity_text" data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000">
                       <h2>Quality</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                       <a class="exp_more_btn" id="exp_more_btn_id" href="">
@@ -147,18 +155,19 @@
                     </div>
                   </div>
                   <div class="capacity">
-                    <div class="capacity_img">
+                    <div class="capacity_img" data-aos="fade-right" data-aos-offset="300"
+                    data-aos-duration="1000" data-aos-easing="ease-in-sine">
                         <img src="assets/images/product-img.png" alt="">
                     </div>
-                    <div class="capacity_text">
+                    <div class="capacity_text"data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000">
                       <h2>Capacity</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                       <a class="exp_more_btn" href="">
                         <span class="exp_more_text">Explore More</span>
                       </a>
-                    </div>
-                    <div class="capacity_slant_2">
-                      <img src="assets/images/bottom-curve_b.png" alt="">
                     </div>
                   </div> 
                 </section>
@@ -200,7 +209,34 @@
                   
                   </ul>
                   </div>
-                  <section class="industry_weserve">
+                  <div class="industry_products row">
+                    <div class="col-md-6 wow fadeInLeft delay-05s animated" style="height: 500px;visibility: visible; animation-name: fadeInLeft;">
+                     <img src="assets/images/key_facts.jpg" width="100%" height="500px" alt="" srcset="">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-end flex-column" style="height: 500px;">
+                       <div class="cols d-flex align-items-end flex-column">
+                        <h1>180  <sub>+</sub></h1>
+                        <br>
+                          <h3>Products we server to the industrys</h3>
+                       </div>
+                       <div class="cols d-flex align-items-end flex-column">
+                        <h1>80 <sup>+</sup></h3>
+                        <br>
+                          <h3>Mold Design we server</h1>
+                       </div>
+                       <div class="cols d-flex align-items-end flex-column">
+                        <h1>24x7</h3>
+                        <br>
+                          <h3>Production line working</h3>
+                       </div>
+                       <div class="cols d-flex align-items-end flex-column">
+                        <h1>8<sup>+</sup></h1>
+                        <br>
+                          <h3>Production line we have</h3>
+                       </div>
+                    </div>
+                    </div>
+                  <!-- <section class="industry_weserve">
                     <div class="main_div">
                       <div class="image-container">
                     </div>
@@ -289,7 +325,7 @@
                    </section>
                     <div class="key_fects_img"> 
                     <img src="assets/images/key_facts_mobile.jpg" alt="" srcset="">
-                   </div>
+                   </div> -->
                    <div class="atul-foundation">
                     <div class="container">
                     <div class="title_products">Products</div>
@@ -460,9 +496,29 @@
     <script src="assets/js/Header/Nav_bar.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/Slider/slider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/imagesloaded.pkgd.min.js'></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/hammer.min.js'></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/154/sequence.min.2.1.0.js'></script>
+<script>
+  document.querySelector('html').classList.remove('no-js');
+      if (!window.Cypress) {
+        const scrollCounter = document.querySelector('.js-scroll-counter');
+
+        AOS.init({
+          mirror: true
+        });
+
+        document.addEventListener('aos:in', function(e) {
+          console.log('in!', e.detail);
+        });
+
+        window.addEventListener('scroll', function() {
+          scrollCounter.innerHTML = window.pageYOffset;
+        });
+      }
+</script>
     <script>
           // Preloder
       $(window).on('load', function () {
